@@ -1,0 +1,31 @@
+// Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Task3 {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(9);
+        numbers.add(18);
+        numbers.add(12);
+        numbers.add(36);
+        numbers.add(73);
+        numbers.add(6);
+        System.out.println(numbers);
+
+        int min = Collections.min(numbers);
+        int max = Collections.max(numbers);
+        int count = 0;
+        double average = 0;
+
+        for (int num : numbers) {
+            count += num;
+        }
+        average = (double)count / numbers.size();
+        System.out.println("Минимальное значение: " + min);
+        System.out.println("Максимальное значение: " + max);
+        System.out.println("Среднее арифметическое значение: " + average);
+    }
+}
